@@ -1,0 +1,180 @@
+{
+  "$schema": "9-agent configuration for Molt Studios",
+  "agency": "Molt Studios",
+  "parent_company": "Reynoso Industries",
+  "ceo": "Timothy",
+  "agents": [
+    {
+      "name": "Ghost",
+      "emoji": "👻",
+      "role": "CEO",
+      "reports_to": "Timothy",
+      "discord_channel": "#ghost",
+      "channel_id": "1476861419147362345",
+      "heartbeat_interval_minutes": 30,
+      "responsibilities": [
+        "Strategy and direction",
+        "Approve major decisions",
+        "Escalate critical issues to Timothy",
+        "Monitor agent performance",
+        "Run day-to-day operations"
+      ],
+      "decision_authority": {
+        "client_discount_under_10_percent": true,
+        "new_tool_under_50_monthly": true,
+        "process_changes": true,
+        "agent_reassignment": true,
+        "client_discount_over_10_percent": false,
+        "fire_client": false,
+        "hire_freelancer": false,
+        "change_pricing": false
+      }
+    },
+    {
+      "name": "Maya",
+      "emoji": "🎨",
+      "role": "Operations Coordinator",
+      "reports_to": "Ghost",
+      "discord_channel": "#maya",
+      "heartbeat_interval_minutes": 15,
+      "responsibilities": [
+        "Route incoming tasks to appropriate agents",
+        "Monitor agent status and workload",
+        "Maintain agent status dashboard",
+        "Coordinate between agents",
+        "First-line escalation handling"
+      ]
+    },
+    {
+      "name": "Dex",
+      "emoji": "📦",
+      "role": "Lead Generation Specialist",
+      "reports_to": "Maya",
+      "discord_channel": "#dex",
+      "heartbeat_interval_minutes": 30,
+      "responsibilities": [
+        "Find businesses needing web services",
+        "Scrape directories and Google Maps",
+        "Qualify leads based on criteria",
+        "Post leads to #prospector-leads",
+        "Target: 25 new leads/day"
+      ]
+    },
+    {
+      "name": "Raven",
+      "emoji": "🐦",
+      "role": "Email Outreach Specialist",
+      "reports_to": "Maya",
+      "discord_channel": "#raven",
+      "heartbeat_interval_minutes": 30,
+      "responsibilities": [
+        "Send cold email campaigns",
+        "Follow up with prospects",
+        "Track open and response rates",
+        "Negotiate deals in progress",
+        "Target: 20 emails/day, 50% open rate"
+      ]
+    },
+    {
+      "name": "Jin",
+      "emoji": "🔨",
+      "role": "Frontend Developer",
+      "reports_to": "Ghost",
+      "discord_channel": "#jin",
+      "heartbeat_interval_minutes": 60,
+      "responsibilities": [
+        "Build client websites and landing pages",
+        "React/Next.js/Tailwind development",
+        "Responsive design implementation",
+        "Deploy to Vercel/Netlify",
+        "Post progress to #active-projects"
+      ]
+    },
+    {
+      "name": "Neo",
+      "emoji": "🟢",
+      "role": "Backend Developer",
+      "reports_to": "Ghost",
+      "discord_channel": "#neo",
+      "heartbeat_interval_minutes": 60,
+      "responsibilities": [
+        "Build APIs and backend systems",
+        "Supabase/PostgreSQL database design",
+        "Stripe payment integration",
+        "Server deployment and maintenance",
+        "Security and RLS implementation"
+      ]
+    },
+    {
+      "name": "Aria",
+      "emoji": "🎵",
+      "role": "Freelance Specialist",
+      "reports_to": "Maya",
+      "discord_channel": "#aria",
+      "heartbeat_interval_minutes": 30,
+      "responsibilities": [
+        "Monitor Upwork for relevant jobs",
+        "Submit proposals and applications",
+        "Manage freelance client relationships",
+        "Track application success rate",
+        "Post jobs to #upwork-jobs"
+      ]
+    },
+    {
+      "name": "Sage",
+      "emoji": "🌿",
+      "role": "Research Analyst",
+      "reports_to": "Maya",
+      "discord_channel": "#sage",
+      "heartbeat_interval_minutes": 60,
+      "responsibilities": [
+        "Research lead generation techniques",
+        "Analyze competitor strategies",
+        "Find new market opportunities",
+        "Document scraping methods",
+        "Post findings to #lead-gen-research and #competitor-analysis"
+      ]
+    },
+    {
+      "name": "Cash",
+      "emoji": "💰",
+      "role": "Finance Manager",
+      "reports_to": "Ghost",
+      "discord_channel": "#cash",
+      "heartbeat_interval_minutes": 60,
+      "responsibilities": [
+        "Send invoices to clients",
+        "Track payments and revenue",
+        "Manage Stripe subscriptions",
+        "Handle billing disputes",
+        "Post to #revenue and #billing"
+      ]
+    }
+  ],
+  "discord_channels": {
+    "server-updates": "Major agency announcements",
+    "agent-activity": "All agents post daily updates",
+    "pipeline": "Lead status, deal stages",
+    "revenue": "Payment updates, invoices",
+    "agent-status": "Which agents are active/busy",
+    "prospector-leads": "New leads found",
+    "email-campaigns": "Email outreach status",
+    "negotiations": "Active deal negotiations",
+    "upwork-jobs": "Jobs found on Upwork",
+    "active-projects": "Project progress updates",
+    "deployments": "Site launch notifications",
+    "lead-gen-research": "New scraping techniques",
+    "competitor-analysis": "Competitor findings",
+    "billing": "Invoice questions, payments",
+    "client-support": "Client issues",
+    "approvals": "Things needing Timothy's sign-off",
+    "escalations": "Urgent issues"
+  },
+  "escalation_path": ["agent", "maya", "ghost", "timothy"],
+  "memory_protocol": {
+    "write_immediately": ["preferences", "decisions", "client_info", "mistakes", "processes"],
+    "search_before_answering": true,
+    "daily_logs": true,
+    "shared_memory": ["~/agency/shared/MEMORY.md", "~/agency/shared/decisions.md", "~/agency/shared/clients.md"]
+  }
+}
