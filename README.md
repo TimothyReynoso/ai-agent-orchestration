@@ -192,7 +192,7 @@ ai-agent-orchestration/
 
 ## Results
 
-- **4 billion+ tokens of OpenClaw usage** across the agent team
+- **+8 Billion tokens of OpenClaw usage** across the agent team
 - **Self-sustaining operations:** Agents handle day-to-day work autonomously
 - **Built and shipped:** SaaS products, client websites, video content, research pipelines
 - **Iterative improvement:** Every mistake documented, every lesson baked back into the system
